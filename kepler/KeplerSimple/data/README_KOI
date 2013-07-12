@@ -1,0 +1,59 @@
+March 5, 2013
+ 
+The current verion contains all the columns 
+of the Kepler Object of Interest (KOI) table in a tab-delimited
+format.
+
+
+Columns included are:
+kepid	kepoi_name	kepoi	
+degree_ra	ra_err	degree_dec	dec_err	
+koi_gmag	koi_gmag_err	koi_rmag	koi_rmag_err	
+koi_imag	koi_imag_err	koi_zmag	koi_zmag_err	
+koi_jmag	koi_jmag_err	koi_hmag	koi_hmag_err	
+koi_kmag	koi_kmag_err	koi_kepmag	koi_kepmag_err	
+koi_disposition	koi_pdisposition	koi_period	
+koi_period_err1	koi_period_err2	koi_time0bk	
+koi_time0bk_err1	koi_time0bk_err2	
+koi_depth	koi_depth_err1	koi_depth_err2	
+koi_duration	koi_duration_err1	koi_duration_err2	
+koi_ingress	koi_ingress_err1	koi_ingress_err2	
+koi_impact	koi_impact_err1	koi_impact_err2	
+koi_incl	koi_incl_err1	koi_incl_err2	
+koi_sma	koi_sma_err1	koi_sma_err2	
+koi_eccen	koi_eccen_err1	koi_eccen_err2	
+koi_longp	koi_longp_err1	koi_longp_err2	
+koi_ror	koi_ror_err1	koi_ror_err2	
+koi_dor	koi_dor_err1	koi_dor_err2	
+koi_prad	koi_prad_err1	koi_prad_err2	
+koi_teq	koi_teq_err1	koi_teq_err2	
+koi_steff	koi_steff_err1	koi_steff_err2	
+koi_slogg	koi_slogg_err1	koi_slogg_err2	
+koi_smet	koi_smet_err1	koi_smet_err2	
+koi_srad	koi_srad_err1	koi_srad_err2	
+koi_smass	koi_smass_err1	koi_smass_err2	
+koi_sage	koi_sage_err1	koi_sage_err2	
+koi_sparprov	koi_delivname	koi_quarters	koi_count	
+koi_num_transits	koi_max_sngle_ev	koi_max_mult_ev	
+koi_bin_oedp_sig	koi_fp_bkgid	koi_fp_djmag	koi_comment	
+koi_trans_mod	koi_model_snr	koi_model_dof	koi_model_chisq	
+koi_limbdark_mod	koi_ldm_coeff4	koi_ldm_coeff3	koi_ldm_coeff2	koi_ldm_coeff1	
+koi_fwm_stat_sig	koi_fwm_sra	koi_fwm_sra_err	
+koi_fwm_sdec	koi_fwm_sdec_err	koi_fwm_srao	koi_fwm_srao_err	
+koi_fwm_sdeco	koi_fwm_sdeco_err	koi_fwm_prao	koi_fwm_prao_err	
+koi_fwm_pdeco	koi_fwm_pdeco_err	koi_dicco_mra	koi_dicco_mra_err	
+koi_dicco_mdec	koi_dicco_mdec_err	koi_dicco_msky	koi_dicco_msky_err	
+koi_dicco_fra	koi_dicco_fra_err	koi_dicco_fdec	koi_dicco_fdec_err	
+koi_dicco_fsky	koi_dicco_fsky_err	koi_dikco_mra	koi_dikco_mra_err	
+koi_dikco_mdec	koi_dikco_mdec_err	koi_dikco_msky	koi_dikco_msky_err	
+koi_dikco_fra	koi_dikco_fra_err	koi_dikco_fdec	koi_dikco_fdec_err	
+koi_dikco_fsky	koi_dikco_fsky_err	koi_vet_stat	rowupdate
+
+
+For more information on the contents, see 
+http://exoplanetarchive.ipac.caltech.edu/docs/API_kepcandidate_columns.html
+
+This table will be updated over time with new deliveries from NExScI
+and the Kepler Science Team.
+
+
