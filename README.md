@@ -16,5 +16,6 @@ Mapping Stars
 -------------
 * [HYG Database](http://www.astronexus.com/node/34) The HYG database is a compilation of stars found in three major databases: the Hipparcos Catalog, the Yale Bright Star Catalog, and the Gliese Catalog of Nearby Stars.  Get data from [github repo](https://github.com/astronexus).
 * [Right Ascension](http://en.wikipedia.org/wiki/Right_ascension), [Declination](http://en.wikipedia.org/wiki/Declination), [Light Year](http://en.wikipedia.org/wiki/Light_year)
+* [Sol Station](http://www.solstation.com/)
 * [Chrome Experiment 100,000 Stars](http://workshop.chromeexperiments.com/stars/), [Making of 100,000 Stars](http://www.html5rocks.com/en/tutorials/casestudies/100000stars/)
 * [Robert Hodgin's 100 Year Starship Screensaver](http://roberthodgin.com/look-up-100-year-starship-screensaver/)
