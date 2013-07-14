@@ -19,3 +19,8 @@ Mapping Stars
 * [Sol Station](http://www.solstation.com/)
 * [Chrome Experiment 100,000 Stars](http://workshop.chromeexperiments.com/stars/), [Making of 100,000 Stars](http://www.html5rocks.com/en/tutorials/casestudies/100000stars/)
 * [Robert Hodgin's 100 Year Starship Screensaver](http://roberthodgin.com/look-up-100-year-starship-screensaver/)
+
+Imaging
+-------
+* [](http://poniesandlight.co.uk/notes/creating_normal_maps_from_nasa_depth_data/), [](https://github.com/tgfrerer/normalMapper)
+* 
