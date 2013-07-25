@@ -3,7 +3,6 @@ Table hyg;
 
 void setup() {
   size(640, 480, P3D);
-
   hyg = loadTable("hygxyz.csv","header");
   println(hyg.getRowCount());
 }
@@ -22,6 +21,7 @@ void draw() {
   fill(255,255,0);
   noStroke();
   sphere(12);
-  noLoop();
+  //noLoop();
+  println(frameRate);
 }
 
