@@ -1,5 +1,8 @@
-// ExoPlanet Class
+// Start of a simple ExoPlanets Visualization
 // based off of the work of Jer Thorp: https://github.com/blprnt/Kepler-Visualization
+
+// This example makes use of the Exoplanet Orbit Database
+// and the Exoplanet Data Explorer at exoplanets.org.
 
 class ExoPlanet {
   
