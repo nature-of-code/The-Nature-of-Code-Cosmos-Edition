@@ -49,9 +49,8 @@ void loadPlanets(String file) {
 void draw() {
 
   // Zoom in and out with a and z keys
-  if (zoomout) zoom = lerp(zoom,0.01,0.02);
-  if (zoomin) zoom = lerp(zoom,1,0.02);
-  zoom = constrain(zoom, 0.01, 0.99);
+  if (zoomout) zoom = lerp(zoom,0.06,0.02);
+  if (zoomin) zoom = lerp(zoom,2,0.02);
 
   background(10);
 
