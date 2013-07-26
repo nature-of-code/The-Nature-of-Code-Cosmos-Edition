@@ -2,7 +2,8 @@
 // based off of the work of Jer Thorp: https://github.com/blprnt/Kepler-Visualization
 
 class ExoPlanet {
-  // Data from the imported files
+  
+  // Not using at the moment
   String KOI;
 
   float period;

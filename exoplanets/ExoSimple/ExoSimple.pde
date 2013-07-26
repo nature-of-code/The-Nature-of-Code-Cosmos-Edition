@@ -27,7 +27,7 @@ void loadPlanets(String file) {
     ExoPlanet ep = new ExoPlanet();
     ep.period = row.getFloat("PER");
     String rad = row.getString("R");
-    // Accounting for no radius
+    // Accounting for no radius, hacky
     if (rad.length() == 0) {
       ep.radius = 1;
     } 
@@ -35,13 +35,10 @@ void loadPlanets(String file) {
       ep.radius = row.getFloat("R");
     }
     ep.axis = row.getFloat("A");   
-    //ep.feature = true;
     ep.label = row.getString("NAME");
     ep.init();
 
-    //if (ep.label.contains("Kepler")) {
     planets.add(ep);
-    //}
   }
   // Don't seem to have temperature with this dataset
   // ep.temp =
@@ -50,8 +47,8 @@ void loadPlanets(String file) {
 
 
 void draw() {
-  //println(frameCount);
 
+  // Zoom in and out with a and z keys
   if (zoomin) zoom += 0.01;
   if (zoomout) zoom -= 0.01;
   zoom = constrain(zoom, 0.01, 0.99);
@@ -77,9 +74,9 @@ void draw() {
   ellipse(0, 0, AU * 10, AU * 10);
 
   // Draw the sun
-  //fill(255);
-  //noStroke();
-  //ellipse(0, 0, 50, 50);
+  fill(255,255,0);
+  noStroke();
+  ellipse(0, 0, 16, 16);
 
   // Render the planets
   for (ExoPlanet p : planets) {
@@ -92,6 +89,8 @@ void draw() {
   text("Total exoplanets: " + planets.size(), 10, 60);
   text("Frame rate: " + int(frameRate), 10, 80);
   text("Scale: " + nf(zoom, 2, 2), 10, 100);
+  text("Zoom keys: " + a,z, 10, 120);
+
 }
 
 void addMarkerPlanets() {
@@ -137,8 +136,11 @@ void addMarkerPlanets() {
   planets.add(mercury);
 }
 
+
+// Code for zooming
 boolean zoomout = false;
 boolean zoomin = false;
+
 void keyPressed() {
   if (key == 'a') {
     zoomin = true;
