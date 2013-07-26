@@ -89,7 +89,7 @@ void draw() {
   text("Total exoplanets: " + planets.size(), 10, 60);
   text("Frame rate: " + int(frameRate), 10, 80);
   text("Scale: " + nf(zoom, 2, 2), 10, 100);
-  text("Zoom keys: " + a,z, 10, 120);
+  text("Zoom keys: a,z", 10, 120);
 
 }
 
