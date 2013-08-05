@@ -15,7 +15,7 @@ void setup() {
     float cy = row.getFloat("Y"); 
     float cz = row.getFloat("Z");
     PShape part = createShape();
-    part.beginShape(QUAD);
+    /*part.beginShape(QUAD);
     part.noStroke();
     part.tint(255);
     part.texture(sprite);
@@ -24,7 +24,13 @@ void setup() {
     part.vertex(cx + partSize/2, cy - partSize/2, cz, sprite.width, 0);
     part.vertex(cx + partSize/2, cy + partSize/2, cz, sprite.width, sprite.height);
     part.vertex(cx - partSize/2, cy + partSize/2, cz, 0, sprite.height);    
-    part.endShape();    
+    part.endShape();    */
+    
+    part.beginShape(POINTS);
+    part.stroke(255);
+    part.strokeWeight(2);
+    part.vertex(cx,cy,cz);
+    part.endShape();
     universe.addChild(part);
   }
 
