@@ -1,27 +1,28 @@
 
-Table hyg;
+ArrayList<Star> universe;
 
 void setup() {
   size(640, 480, P3D);
-  hyg = loadTable("hygxyz.csv","header");
-  println(hyg.getRowCount());
-}
-
-void draw() {
-  background(0);
-  translate(width/2,height/2);
+  universe = new ArrayList<Star>();
+  Table hyg = loadTable("hygxyz.csv", "header");
+  println("Database total stars: " + hyg.getRowCount());
   for (TableRow row : hyg.rows()) {
     stroke(255);
     float x = row.getFloat("X"); 
     float y = row.getFloat("Y"); 
     float z = row.getFloat("Z");
-    point(x, y, z);
+    universe.add(new Star(x,y,z));
   }
+}
+
+void draw() {
+  background(0);
+  translate(width/2, height/2);
   
-  fill(255,255,0);
-  noStroke();
-  sphere(12);
-  //noLoop();
+  for (Star s : universe) {
+    s.display(); 
+  }
+
   println(frameRate);
 }
 
