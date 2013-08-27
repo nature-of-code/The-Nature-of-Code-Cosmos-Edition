@@ -25,3 +25,8 @@ Imaging
 -------
 * [Creating normal maps from NASA depth data](http://poniesandlight.co.uk/notes/creating_normal_maps_from_nasa_depth_data/), [Source](https://github.com/tgfrerer/normalMapper)
 * [Location of every photo from the ISS](http://natronics.github.io/ISS-photo-locations/)
+
+
+Planetarium
+-----------
+* [Processing Dome Projection library](https://github.com/codeanticode/planetarium)
