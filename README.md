@@ -25,6 +25,10 @@ Imaging
 -------
 * [Creating normal maps from NASA depth data](http://poniesandlight.co.uk/notes/creating_normal_maps_from_nasa_depth_data/), [Source](https://github.com/tgfrerer/normalMapper)
 * [Location of every photo from the ISS](http://natronics.github.io/ISS-photo-locations/)
+* [Time-Lapse Earth from ISS](https://vimeo.com/61487989)
+* [ISS Crew Earth Observation Photos](http://eol.jsc.nasa.gov/Videos/CrewEarthObservationsVideos/)
+* [Nasa "Multimedia" HD](http://www.nasa.gov/multimedia/hd/)
+* [Nasa Earth Observatory](http://earthobservatory.nasa.gov/)
 
 
 Planetarium
