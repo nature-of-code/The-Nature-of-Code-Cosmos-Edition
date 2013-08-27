@@ -33,4 +33,5 @@ Imaging
 
 Planetarium
 -----------
+* [Real-time Digital Dome Rendering](http://csc.lsu.edu/~kooima/articles/realtimedome/index.html)
 * [Processing Dome Projection library](https://github.com/codeanticode/planetarium)
