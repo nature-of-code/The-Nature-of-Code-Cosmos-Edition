@@ -42,5 +42,6 @@ Other Links TBD
 ---------------
 * http://www.lns.cornell.edu/~seb/partiview/
 * http://www.lns.cornell.edu/~seb/partiview/planets.html
+* [Black Hole Gas Cloud](http://www.space.com/21983-black-hole-rips-and-whips-galactic-gas-cloud-video.html)
 * [active space missions traveling beyond Earth orbit](http://www.planetary.org/multimedia/space-images/charts/whats-up-in-the-solar-system-frohn.html)
 * [Ardusat](http://www.kickstarter.com/projects/575960623/ardusat-your-arduino-experiment-in-space)
