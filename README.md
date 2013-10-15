@@ -34,16 +34,12 @@ Imaging
 
 Planetarium
 -----------
-
-
+* [Real-time Digital Dome Rendering](http://csc.lsu.edu/~kooima/articles/realtimedome/index.html)
+* [Processing Dome Projection library](https://github.com/codeanticode/planetarium)
 
 
 Other Links TBD
 ---------------
 * http://www.lns.cornell.edu/~seb/partiview/
 * http://www.lns.cornell.edu/~seb/partiview/planets.html
-
-
-
-* [Real-time Digital Dome Rendering](http://csc.lsu.edu/~kooima/articles/realtimedome/index.html)
-* [Processing Dome Projection library](https://github.com/codeanticode/planetarium)
+* [active space missions traveling beyond Earth orbit](http://www.planetary.org/multimedia/space-images/charts/whats-up-in-the-solar-system-frohn.html)
