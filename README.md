@@ -37,6 +37,8 @@ A "syllabus" and repository of Processing examples for ITP fall workshop about p
 * [ALMA telescope: star birth](http://www.almaobservatory.org/en/press-room/press-releases/632-alma-takes-close-look-at-drama-of-starbirth)
 
 ### Things that look like Space
+* 3d models
+
 
 ## 12:00 PM - Lunch
 
