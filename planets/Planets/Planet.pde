@@ -11,7 +11,8 @@ class Planet {
   ArrayList<Planet> orbits;
 
   boolean light = false;
-
+  boolean ring = false;
+  
   PVector spinAngles;
   PVector orbitAngles;
   PVector spinSpeed;
@@ -49,7 +50,7 @@ class Planet {
     orbitSpeed.y = y;
     orbitSpeed.z = z;
   }
-  
+
   void setSpin(float x, float y, float z) {
     spinSpeed.x = x;
     spinSpeed.y = y;
@@ -75,11 +76,22 @@ class Planet {
     rotateY(spinAngles.y);
     rotateZ(spinAngles.z);
     shape(shape);
+    if (ring) {
+      rotateZ(spinAngles.z);
+      rotateY(spinAngles.y);
+      rotateX(spinAngles.x);
+      rotateY(-PI/2);
+      imageMode(CENTER);
+      image(ringImg, 0, 0, radius*5, radius*5);
+    }
+
     popMatrix();
 
     if (light) {
       pointLight(255, 255, 255, 0, 0, 0);
     }
+
+
     for (Planet p : orbits) {
       pushMatrix();
       p.orbit();

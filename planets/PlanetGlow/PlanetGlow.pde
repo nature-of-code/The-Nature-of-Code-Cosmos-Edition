@@ -1,16 +1,17 @@
 
 
 PImage[] textures = new PImage[3];
-int currentTex = 0;
+int currentTex = 2;
 PShape planet;
 
 ParticleSystem ps;
 PImage sprite;  
 PImage glow;
 
-boolean glowing = false;
-boolean sphere = false;
-boolean particles = false;
+boolean glowing = true;
+boolean sphere = true;
+boolean particles = true;
+boolean particleTex = true;
 
 
 void setup() {
@@ -24,7 +25,7 @@ void setup() {
   planet.setTexture(textures[currentTex]);
   glow = loadImage("glow.png");
   sprite = loadImage("sprite.png");
-  ps = new ParticleSystem(1000);
+  ps = new ParticleSystem(500);
 }
 
 void draw() {
@@ -46,20 +47,25 @@ void draw() {
   rotateY(-frameCount*0.003);
   if (glowing) {
     imageMode(CENTER);
+    tint(255);
     image(glow, 0, 0, 250, 250);
   }
 
   if (particles) {
-    hint(DISABLE_DEPTH_MASK);
+    if (particleTex) {
+      hint(DISABLE_DEPTH_MASK);
+    }
     ps.update();
     ps.display();
-    hint(ENABLE_DEPTH_MASK);
+    if (particleTex) {
+      hint(ENABLE_DEPTH_MASK);
+    }
   }
 
   fill(255);
   textSize(16);
   popMatrix();
-  text("Frame rate: " + int(frameRate) + "\n1 to toggle sphere\n2 to toggle glow\n3 to toggle particles\n4 to toggle textures", 10, 20);
+  text("Frame rate: " + int(frameRate) + "\n1 to toggle sphere\n2 to toggle glow\n3 to toggle particles\n4 to toggle planet texture\n5 to toggle particle texture", 10, 20);
 }
 
 void keyPressed() {
@@ -73,10 +79,11 @@ void keyPressed() {
     particles = !particles;
   } 
   else if (key == '4') {
-    println(currentTex);
     currentTex = (currentTex+1)%textures.length;
-    println(currentTex);
     planet.setTexture(textures[currentTex]);
+  } 
+  else if (key == '5') {
+    particleTex = !particleTex;
   }
 }
 

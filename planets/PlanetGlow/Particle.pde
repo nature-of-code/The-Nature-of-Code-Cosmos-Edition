@@ -1,61 +1,64 @@
 class Particle {
 
+  PVector position;
   PVector velocity;
   float lifespan = 255;
-  
+
   PShape part;
   float partSize;
-  
-  PVector gravity = new PVector(0,0.1);
+
+  PVector gravity = new PVector(0, 0.1);
 
 
   Particle() {
-    partSize = random(10,60);
-    part = createShape();
-    part.beginShape(QUAD);
-    part.noStroke();
-    part.texture(sprite);
-    part.normal(0, 0, 1);
-    part.vertex(-partSize/2, -partSize/2, 0, 0);
-    part.vertex(+partSize/2, -partSize/2, sprite.width, 0);
-    part.vertex(+partSize/2, +partSize/2, sprite.width, sprite.height);
-    part.vertex(-partSize/2, +partSize/2, 0, sprite.height);
-    part.endShape();
-    
+    position = new PVector();
+    partSize = random(10, 60);
     rebirth();
-    lifespan = random(255);
+    lifespan = random(127);
   }
 
   PShape getShape() {
     return part;
   }
-  
+
   void rebirth() {
-    float a = random(TWO_PI);
-    float speed = random(0.5,4);
-    velocity = new PVector(cos(a), sin(a));
+    float speed = random(0.5, 2);
+    velocity = PVector.random3D();
     velocity.mult(speed);
     lifespan = 127;   
-    part.resetMatrix();
-    PVector v = PVector.random3D();
-    v.mult(100);
-    part.translate(v.x, v.y,v.z); 
+    position = PVector.random3D();
+    position.mult(105);
   }
-  
+
   boolean isDead() {
     if (lifespan < 0) {
-     return true;
-    } else {
-     return false;
+      return true;
     } 
+    else {
+      return false;
+    }
   }
-  
 
-  public void update() {
+  void display() {
+    pushMatrix();
+    translate(position.x, position.y, position.z);
+
+    if (particleTex) {
+      imageMode(CENTER);
+      tint(color(255, 255, 255, lifespan));
+      image(sprite, 0, 0, partSize, partSize);
+    } 
+    else {
+      stroke(255, lifespan);
+      strokeWeight(partSize/4);
+      point(0,0);
+    }
+    popMatrix();
+  }
+
+  void update() {
+    position.add(velocity);
     lifespan = lifespan - 10;
-    //velocity.add(gravity);
-    
-    part.setTint(color(255,255,255,lifespan));
-    part.translate(velocity.x, velocity.y);
   }
 }
+
