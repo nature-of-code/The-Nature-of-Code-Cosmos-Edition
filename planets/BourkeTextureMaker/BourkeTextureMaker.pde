@@ -1,25 +1,18 @@
 
 
 PImage texture;
-PShape planet;
 
 void setup() {
   size(640, 480, P3D);
   texture = createImage(512, 256, ARGB);
-  noStroke();
-  fill(255);
   calcTexture();
- planet = createShape(SPHERE, 200);
-  planet.setTexture(texture);
 }
 
 void draw() {
   background(0);
-  translate(width/2, height/2);
-  lights();
-  rotateY(frameCount*0.003);
-  rotateX(frameCount*0.0024);
-  shape(planet);
+  image(texture,0,0);
+  texture.save("blue.png");
+  noLoop();
 }
 
 void calcTexture() {
@@ -37,9 +30,9 @@ void calcTexture() {
       float y = sin(theta);            
       float z = sin(phi) * cos(theta);      
       float n = perlin.noise3D(x, y, z, 1.2, 2, 8);
-      float r = 255;
-      float g = map(n, -0.7, 0.7, 255, 0);
-      float b = 0;
+      float r = map(n, -0.7, 0.7, 0, 255);
+      float b = 255;
+      float g = map(n, -0.7, 0.7, 0, 255);
       texture.pixels[j * texture.width + i] = color(r, g, b);
     }
   } 

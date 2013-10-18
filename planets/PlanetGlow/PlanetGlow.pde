@@ -1,72 +1,82 @@
 
 
-PImage texture;
+PImage[] textures = new PImage[3];
+int currentTex = 0;
 PShape planet;
 
 ParticleSystem ps;
 PImage sprite;  
+PImage glow;
+
+boolean glowing = false;
+boolean sphere = false;
+boolean particles = false;
 
 
 void setup() {
   size(640, 480, P3D);
-  texture = createImage(512, 256, ARGB);
   noStroke();
   fill(255);
   planet = createShape(SPHERE, 100);
-  planet.setTexture(texture);
-
+  textures[0] = loadImage("blue.png");
+  textures[1] = loadImage("moon.jpg");
+  textures[2] = loadImage("sun.png");
+  planet.setTexture(textures[currentTex]);
+  glow = loadImage("glow.png");
   sprite = loadImage("sprite.png");
-  ps = new ParticleSystem(2000);
-
+  ps = new ParticleSystem(1000);
 }
 
 void draw() {
   background(0);
-  calcTexture();
 
 
   pushMatrix();
   translate(width/2, height/2);
-  hint(DISABLE_DEPTH_MASK);
-  ps.update();
-  ps.display();
-  hint(ENABLE_DEPTH_MASK);
+
 
   lights();
   rotateY(frameCount*0.003);
   rotateX(frameCount*0.0024);
-  shape(planet);
+  if (sphere) {
+    shape(planet);
+  }
 
   rotateX(-frameCount*0.0024);
   rotateY(-frameCount*0.003);
-  noFill();
-  for (int i = 0; i < 10; i++) {
-    stroke(255, 255, 0, 127-i*20);
-    strokeWeight(5);
-    ellipse(0, 0, 200+i*5, 200+i*5);
+  if (glowing) {
+    imageMode(CENTER);
+    image(glow, 0, 0, 250, 250);
+  }
+
+  if (particles) {
+    hint(DISABLE_DEPTH_MASK);
+    ps.update();
+    ps.display();
+    hint(ENABLE_DEPTH_MASK);
   }
 
   fill(255);
   textSize(16);
   popMatrix();
-  text("Frame rate: " + int(frameRate), 10, 20);
+  text("Frame rate: " + int(frameRate) + "\n1 to toggle sphere\n2 to toggle glow\n3 to toggle particles\n4 to toggle textures", 10, 20);
 }
 
-float zoff = 0;
-void calcTexture() {
-  texture.loadPixels();
-  float xoff = 0.0; // Start xoff at 0
-  for (int x = 0; x < texture.width; x++) {
-    xoff += 0.05;   // Increment xoff 
-    float yoff = 0.0;   // For every xoff, start yoff at 0
-    for (int y = 0; y < texture.height; y++) {
-      yoff += 0.05; // Increment yoff
-      float bright = noise(xoff, yoff, zoff) * 255;
-      // Set each pixel onscreen to a grayscale value
-      texture.pixels[x+y*texture.width] = color(255, bright, 0);
-    }
+void keyPressed() {
+  if (key == '1') {
+    sphere = !sphere;
+  } 
+  else if (key == '2') {
+    glowing = !glowing;
+  } 
+  else if (key == '3') {
+    particles = !particles;
+  } 
+  else if (key == '4') {
+    println(currentTex);
+    currentTex = (currentTex+1)%textures.length;
+    println(currentTex);
+    planet.setTexture(textures[currentTex]);
   }
-  zoff += 0.005;
-  texture.updatePixels();
 }
 
