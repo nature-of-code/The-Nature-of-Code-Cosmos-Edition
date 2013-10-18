@@ -1,11 +1,7 @@
 Star[] stars = new Star[1000];
 
-float factor = 1;
-float target = 1;
+float depth = 1000;
 
-float depth = 5000;
-
-boolean hyperdrive = false;
 boolean rotate = false;
 
 float rotX, rotY, rotZ;
@@ -19,16 +15,19 @@ void setup() {
 
 void draw() {
   background(0);
-  factor = lerp(factor, target, 0.1);
   
   pushMatrix();
   translate(width/2, height/2);
   rotateX(rotY);
   rotateY(rotX);
   rotateZ(rotZ);
+  
+  lights();
+  noStroke();
+  fill(100);
+  sphere(40);
 
   for (Star s : stars) {
-    s.update();
     s.display();
   }
 
@@ -38,20 +37,11 @@ void draw() {
   popMatrix();
   
   fill(255);
-  text("space to engage hyperdrive\nr to enable spin\nmouse drag to rotate view",10,30);
+  text("\nr to enable spin\nmouse drag to rotate view",10,30);
 }
 
 void keyPressed() {
-  if (key == ' ') {
-    hyperdrive = !hyperdrive;
-    if (hyperdrive) {
-      target = 50;
-    } 
-    else {
-      target = 1;
-    }
-  } 
-  else if (key == 'r') {
+if (key == 'r') {
     rotate = !rotate;
   }
 }
