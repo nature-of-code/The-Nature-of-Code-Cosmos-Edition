@@ -12,7 +12,7 @@ class Planet {
 
   boolean light = false;
   boolean ring = false;
-  
+
   PVector spinAngles;
   PVector orbitAngles;
   PVector spinSpeed;
@@ -77,12 +77,20 @@ class Planet {
     rotateZ(spinAngles.z);
     shape(shape);
     if (ring) {
-      rotateZ(spinAngles.z);
-      rotateY(spinAngles.y);
-      rotateX(spinAngles.x);
-      rotateY(-PI/2);
+      rotateZ(-spinAngles.z);
+      rotateY(-spinAngles.y);
+      rotateX(-spinAngles.x);
+      rotateZ(-orbitAngles.z);
+      rotateY(-orbitAngles.y);
+      rotateX(-orbitAngles.x);
+      rotateX(PI/2);
       imageMode(CENTER);
       image(ringImg, 0, 0, radius*5, radius*5);
+      // Or just a circle
+      //strokeWeight(4);
+      //stroke(255,200);
+      //noFill();
+      //ellipse(0, 0, radius*4, radius*4);
     }
 
     popMatrix();
