@@ -10,8 +10,17 @@ A "syllabus" and repository of Processing examples for ITP fall workshop about p
 ### Planetariums and Dome Projection
 * [Real-time Digital Dome Rendering](http://csc.lsu.edu/~kooima/articles/realtimedome/index.html)
 * [Processing Dome Projection library](https://github.com/codeanticode/planetarium)
+* [Carter Emmart Applications Talk](https://vimeo.com/74415426)
 
-### Space Data
+### It looks like space, kind of
+* [Robert Hodgin's Cinder Star](https://github.com/flight404/Eyeo2012/tree/master/Star)
+* [Planets in Processing](https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition/tree/master/planets)
+* [Tons of 3D models from NASA](http://www.nasa.gov/multimedia/3d_resources/models.html)
+* [3D Models in Processing](https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition/tree/master/3dmodels)
+* [Making of 100,000 Stars (WebGL)](http://www.html5rocks.com/en/tutorials/casestudies/100000stars/)]
+* [How to make Planets in WebGL](http://learningthreejs.com/blog/2013/09/16/how-to-make-the-earth-in-webgl/)
+
+### Actual Science
 * Kepler Mission Data
 	* [Exoplanet Data Explorer](http://exoplanets.org/)
 	* [NASA Kepler Site](http://kepler.nasa.gov/)
@@ -35,10 +44,6 @@ A "syllabus" and repository of Processing examples for ITP fall workshop about p
 * [Nasa "Multimedia" HD](http://www.nasa.gov/multimedia/hd/)
 * [Nasa Earth Observatory](http://earthobservatory.nasa.gov/)
 * [ALMA telescope: star birth](http://www.almaobservatory.org/en/press-room/press-releases/632-alma-takes-close-look-at-drama-of-starbirth)
-
-### Things that look like Space
-* 3d models
-
 
 ## 12:00 PM - Lunch
 
