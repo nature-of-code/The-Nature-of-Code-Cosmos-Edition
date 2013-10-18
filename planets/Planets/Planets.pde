@@ -31,7 +31,7 @@ void setup() {
   mercury = new Planet(surftex2, 50);
   sun.addOrbit(earth, 800, 0, 0);
   sun.addOrbit(mercury, 400, 0, 0);
-  earth.setOrbit(0, 0.01, 0);
+  earth.setOrbit(0, 0.004, 0);
   mercury.setOrbit(0.003, 0.007, 0);
   mercury.ring = true;
   

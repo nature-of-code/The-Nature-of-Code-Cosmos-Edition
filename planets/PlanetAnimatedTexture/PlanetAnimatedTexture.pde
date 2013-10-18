@@ -36,7 +36,7 @@ void calcTexture() {
       texture.pixels[x+y*texture.width] = color(255, bright, 0);
     }
   }
-  zoff += 0.005;
+  zoff += 0.02;
   texture.updatePixels();
 }
 

@@ -3,7 +3,7 @@
 PImage texture;
 
 void setup() {
-  size(640, 480, P3D);
+  size(512, 256);
   texture = createImage(512, 256, ARGB);
   calcTexture();
 }
