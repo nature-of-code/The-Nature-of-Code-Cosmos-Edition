@@ -58,9 +58,5 @@ public class Body {
   public String toString() {
     return "" + rx + ", "+ ry+ ", "+  vx+ ", "+ vy+ ", "+ mass;
   }
+}
 
-  public boolean in(Quad q) {
-    return q.contains(this.rx, this.ry);
-  }
-}
-}

@@ -1,11 +1,12 @@
 
 // Adapting http://physics.princeton.edu/~fpretori/Nbody/
 
-public Body bodies[]= new Body[600];
+public Body bodies[]= new Body[800];
 
 void setup()
 {
   size(640, 480,P2D);
+  frameRate(30);
   startthebodies();
 }
 
@@ -18,8 +19,8 @@ void draw() {
 
   translate(width/2, height/2); //Originally the origin is in the top right. Put it in its normal place
   for (int i=0; i<bodies.length; i++) {
-    stroke(255,100);
-    strokeWeight(8);
+    stroke(255,200);
+    strokeWeight(2);
     point((int) Math.round(bodies[i].rx*600/1e18), (int) Math.round(bodies[i].ry*600/1e18));
   }
   //go through the Brute Force algorithm (see the function below)
@@ -52,10 +53,10 @@ public void startthebodies() {
     double vy   = Math.signum(px)*Math.sin(thetav)*magv;
     //Orient a random 2D circular orbit
 
-    if (Math.random() <=.5) {
+    /*if (Math.random() <=.5) {
       vx=-vx;
       vy=-vy;
-    } 
+    } */
 
     double mass = Math.random()*solarmass*10+1e20;
     //Color the masses in green gradients by mass
