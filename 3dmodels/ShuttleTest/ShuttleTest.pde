@@ -5,12 +5,12 @@ float rotX, rotY;
 void setup() {
   size(600, 400, P3D);
   shuttle = loadShape("shuttle.obj");
-  shuttle.scale(100);
+  shuttle.scale(50,50,50);
 }
 
 void draw() {
-  background(127);
-  translate(width/2, height/2);
+  background(0);
+  translate(width/2, height/2,-100);
   rotateX(rotY);
   rotateY(rotX);
   lights();
