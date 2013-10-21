@@ -25,10 +25,10 @@ Sun s;
 
 PImage[] textures = new PImage[3];
 
+Starfield stars;
 
+float rotX, rotY;
 
-// An angle to rotate around the scene
-float angle = 0;
 
 void setup() {
   size(800, 800, P3D);
@@ -45,6 +45,8 @@ void setup() {
   // A single sun
   PImage suntex = loadImage("sun.png");  
   s = new Sun(suntex);
+  
+  stars = new Starfield();
 }
 
 void draw() {
@@ -59,7 +61,10 @@ void draw() {
 
   translate(width/2, height/2, 300);
 
-  rotateY(angle);
+  rotateX(rotY);
+  rotateY(rotX);
+  
+  stars.display();
 
   // Display the Sun
   s.display();
@@ -69,6 +74,11 @@ void draw() {
     planets[i].display();
   }
 
-  angle += 0.003;
+}
+
+
+void mouseDragged() {
+  rotX += (mouseX - pmouseX) * 0.01;
+  rotY -= (mouseY - pmouseY) * 0.01;
 }
 
