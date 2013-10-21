@@ -36,6 +36,7 @@ void draw() {
   }
   popMatrix();
   
+  noLights();
   fill(255);
   text("\nr to enable spin\nmouse drag to rotate view",10,30);
 }
