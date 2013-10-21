@@ -10,6 +10,7 @@ A "syllabus" and repository of Processing examples for ITP fall workshop about p
 ### Planetariums and Dome Projection
 * [Real-time Digital Dome Rendering](http://csc.lsu.edu/~kooima/articles/realtimedome/index.html)
 * [Processing Dome Projection library](https://github.com/codeanticode/planetarium)
+* [Download library](______)
 * [Carter Emmart Applications Talk](https://vimeo.com/74415426)
 
 ### It looks like space, kind of
