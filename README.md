@@ -35,11 +35,14 @@ A "syllabus" and repository of Processing examples for ITP fall workshop about p
 	* [Extrasolar planets on Wikipedia](https://en.wikipedia.org/wiki/Extrasolar_planet)
 	* [Processing Sample Exoplanets Viz](https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition/tree/master/exoplanets)
 * Star Data
-	* [HYG Database](http://www.astronexus.com/node/34) The HYG database is a compilation of stars found in three major databases: the Hipparcos Catalog, the Yale Bright Star Catalog, and the Gliese Catalog of Nearby Stars.  Get data from [github repo](https://github.com/astronexus).
-	* [Right Ascension](http://en.wikipedia.org/wiki/Right_ascension), [Declination](http://en.wikipedia.org/wiki/Declination), [Light Year](http://en.wikipedia.org/wiki/Light_year)
-	* [Sol Station](http://www.solstation.com/)
+	* HYGDatabase
+	    * The [HYG Database](http://www.astronexus.com/node/34) is a compilation of stars found in three major databases: the Hipparcos Catalog, the Yale Bright Star Catalog, and the Gliese Catalog of Nearby Stars.
+	    * Get data from [github repo](https://github.com/astronexus).
+	    * [Processing HYG Database Examples](https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition/tree/master/stars/HYGDatabase)
 	* [Chrome Experiment 100,000 Stars](http://workshop.chromeexperiments.com/stars/), [Making of 100,000 Stars](http://www.html5rocks.com/en/tutorials/casestudies/100000stars/)
 	* [Robert Hodgin's 100 Year Starship Screensaver](http://roberthodgin.com/look-up-100-year-starship-screensaver/)
+	* [Right Ascension](http://en.wikipedia.org/wiki/Right_ascension), [Declination](http://en.wikipedia.org/wiki/Declination), [Light Year](http://en.wikipedia.org/wiki/Light_year)
+	* More star data at [Sol Station](http://www.solstation.com/)
 * NBody Simulation
     * [Wikipedia Page](http://en.wikipedia.org/wiki/N-body_simulation)
     * [Super Computer NBody Simulations!](http://www.cita.utoronto.ca/~dubinski/nbody/)
@@ -47,10 +50,12 @@ A "syllabus" and repository of Processing examples for ITP fall workshop about p
     * [NBody Processing Examples](https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition/tree/master/stars/nbody_demos)
 
 ### Images from Space
+* ISS Space Station Photos
+    * [Dataset for all photos](http://natronics.github.io/ISS-photo-locations/)
+    * [ISS Crew Earth Observation Photos from NASA](http://eol.jsc.nasa.gov/Videos/CrewEarthObservationsVideos/)
+    * [Time-Lapse Earth from ISS](https://vimeo.com/61487989)
+    * [Processing examples for getting ISS photo data](https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition/tree/master/imaging/iss)
 * [Creating normal maps from NASA depth data](http://poniesandlight.co.uk/notes/creating_normal_maps_from_nasa_depth_data/), [Source](https://github.com/tgfrerer/normalMapper)
-* [Location of every photo from the ISS](http://natronics.github.io/ISS-photo-locations/)
-* [Time-Lapse Earth from ISS](https://vimeo.com/61487989)
-* [ISS Crew Earth Observation Photos](http://eol.jsc.nasa.gov/Videos/CrewEarthObservationsVideos/)
 * [Nasa "Multimedia" HD](http://www.nasa.gov/multimedia/hd/)
 * [Nasa Earth Observatory](http://earthobservatory.nasa.gov/)
 * [ALMA telescope: star birth](http://www.almaobservatory.org/en/press-room/press-releases/632-alma-takes-close-look-at-drama-of-starbirth)
