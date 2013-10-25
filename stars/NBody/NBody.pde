@@ -1,11 +1,16 @@
+// NOC Cosmos
+// NBody Simulation
+// https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition
 
-// Adapting http://physics.princeton.edu/~fpretori/Nbody/
-
+// Adapted from http://physics.princeton.edu/~fpretori/Nbody/
+// This one is slow computationally and we can only do about ~800 particles
 Body bodies[]= new Body[800];
 
+// A scaling factor for pixels
 int scale = 600;
 
-double G = 6.673e-11;   // gravitational constant
+// This example is using more accurate physics than usual so everything is double
+double G = 6.673e-11;   // Gravitational constant
 double solarmass=1.98892e30;
 
 void setup() {
@@ -13,33 +18,29 @@ void setup() {
   begin();
 }
 
-
-//Called by the applet initally. It can be executed again by calling repaint();
 void draw() {
   background(0);
   fill(255);
   text(int(frameRate), 10, 30);
 
-  translate(width/2, height/2); //Originally the origin is in the top right. Put it in its normal place
+  translate(width/2, height/2); 
 
-  //go through the Brute Force algorithm (see the function below)
   for (int i = 0; i < bodies.length; i++) {
     bodies[i].display();
     bodies[i].resetForce();
-    //Notice-2 loops-->N^2 complexity
     for (int j = 0; j < bodies.length; j++) {
       if (i != j) bodies[i].addForce(bodies[j]);
     }
   }
-  //Then, loop again and update the bodies using timestep dt
+  // Loop again and update the bodies using timestep dt
   for (int i = 0; i < bodies.length; i++) {
     bodies[i].update(1e11);
   }
 }
 
-//Initialize N bodies with random positions and circular velocities
+// Initialize N bodies with random positions and circular velocities
 void begin() {
-  double radius = 1e18;        // radius of universe
+  double radius = 1e18;        // Radius of universe
   double solarmass=1.98892e30;
   for (int i = 0; i < bodies.length; i++) {
     double px = 1e18*exp(-1.8)*(.5-Math.random());
@@ -56,12 +57,12 @@ void begin() {
     bodies[i]   = new Body(px, py, vx, vy, mass);
   }
 
-  //Put the central mass in
+  // Put the central mass in
   bodies[0]= new Body(0, 0, 0, 0, 1e6*solarmass);
 }
 
-//the bodies are initialized in circular orbits around the central mass.
-//This is just some physics to do that
+// The bodies are initialized in circular orbits around the central mass.
+// This is just some physics to do that
 double circlev(double rx, double ry) {
   double solarmass=1.98892e30;
   double r2=Math.sqrt(rx*rx+ry*ry);
