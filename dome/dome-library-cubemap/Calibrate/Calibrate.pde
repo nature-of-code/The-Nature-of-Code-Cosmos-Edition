@@ -2,6 +2,9 @@ import codeanticode.planetarium.*;
 
 DomeCamera camera;
 float cubeX, cubeY;
+float domeZ = 0;
+float domeScale = 1;
+boolean dome = true;
 boolean grid = false;
 
 void setup() {
@@ -57,7 +60,33 @@ void draw() {
 }
 
 void keyPressed() {
-  grid = !grid;
-  if (grid) camera.setMode(Dome.GRID);
-  else camera.setMode(Dome.NORMAL);  
+  if (key == CODED) {
+    if (keyCode == UP) {
+      domeZ += 1;
+      println("Dome Z    : " + domeZ);
+      camera.translate(0, 0, domeZ);
+    } else if (keyCode == DOWN) {
+      domeZ -= 1;
+      println("Dome Z    : " + domeZ);
+      camera.translate(0, 0, domeZ);
+    } else if (keyCode == LEFT) {
+      domeScale -= 0.05;
+      println("Dome scale: " + domeScale);
+      camera.scale(domeScale);
+    } else if (keyCode == RIGHT) {
+      domeScale += 0.05;
+      println("Dome scale: " + domeScale);
+      camera.scale(domeScale);
+    }
+  } else {
+    if (key == 'g') {
+      grid = !grid;
+      if (grid) camera.setMode(Dome.GRID);
+      else camera.setMode(Dome.NORMAL);  
+    } else if (key == ' ') {
+      dome = !dome;
+      if (dome) camera.enable();
+      else camera.disable();  
+    }
+  }
 }
