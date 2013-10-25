@@ -33,12 +33,18 @@ A "syllabus" and repository of Processing examples for ITP fall workshop about p
 	* [Kepler's Tally of Planets](http://www.nytimes.com/interactive/science/space/keplers-tally-of-planets.html) by Jonathan Corum, NYTimes
 	* [Jer Thorp's Kepler Visualization](https://github.com/blprnt/Kepler-Visualization)
 	* [Extrasolar planets on Wikipedia](https://en.wikipedia.org/wiki/Extrasolar_planet)
+	* [Processing Sample Exoplanets Viz](https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition/tree/master/exoplanets)
 * Star Data
 	* [HYG Database](http://www.astronexus.com/node/34) The HYG database is a compilation of stars found in three major databases: the Hipparcos Catalog, the Yale Bright Star Catalog, and the Gliese Catalog of Nearby Stars.  Get data from [github repo](https://github.com/astronexus).
 	* [Right Ascension](http://en.wikipedia.org/wiki/Right_ascension), [Declination](http://en.wikipedia.org/wiki/Declination), [Light Year](http://en.wikipedia.org/wiki/Light_year)
 	* [Sol Station](http://www.solstation.com/)
 	* [Chrome Experiment 100,000 Stars](http://workshop.chromeexperiments.com/stars/), [Making of 100,000 Stars](http://www.html5rocks.com/en/tutorials/casestudies/100000stars/)
 	* [Robert Hodgin's 100 Year Starship Screensaver](http://roberthodgin.com/look-up-100-year-starship-screensaver/)
+* NBody Simulation
+    * [Wikipedia Page](http://en.wikipedia.org/wiki/N-body_simulation)
+    * [Super Computer NBody Simulations!](http://www.cita.utoronto.ca/~dubinski/nbody/)
+    * [How do galaxies form?](http://science1.nasa.gov/astrophysics/focus-areas/what-are-galaxies/)
+    * [NBody Processing Examples](https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition/tree/master/stars/nbody_demos)
 
 ### Images from Space
 * [Creating normal maps from NASA depth data](http://poniesandlight.co.uk/notes/creating_normal_maps_from_nasa_depth_data/), [Source](https://github.com/tgfrerer/normalMapper)
