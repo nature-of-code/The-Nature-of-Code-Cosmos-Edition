@@ -15,13 +15,13 @@ void setup() {
 
 void draw() {
   background(0);
-  
+
   pushMatrix();
   translate(width/2, height/2);
   rotateX(rotY);
   rotateY(rotX);
   rotateZ(rotZ);
-  
+
   lights();
   noStroke();
   fill(100);
@@ -35,14 +35,14 @@ void draw() {
     rotZ += 0.01;
   }
   popMatrix();
-  
+
   noLights();
   fill(255);
-  text("\nr to enable spin\nmouse drag to rotate view",10,30);
+  text("\nr to enable spin\nmouse drag to rotate view", 10, 30);
 }
 
 void keyPressed() {
-if (key == 'r') {
+  if (key == 'r') {
     rotate = !rotate;
   }
 }

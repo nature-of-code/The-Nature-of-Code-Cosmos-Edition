@@ -16,7 +16,7 @@ float rotX, rotY, rotZ;
 
 void setup() {
   size(400, 400, P3D);
-  canvas = createGraphics(512, 512, P3D);
+  canvas = createGraphics(512, 256, P3D);
 
   // The code of this shader shows how to integrate shaders from shadertoy
   // into Processing with minimal changes.
@@ -24,7 +24,12 @@ void setup() {
   shader.set("resolution", float(width), float(height));
 
   noStroke();
+  
+  // Make larger sphere for it to be background
+  // sphere = createShape(SPHERE, 800);
+  
   sphere = createShape(SPHERE, 100);
+
   sphere.setTexture(canvas);
 }
 
