@@ -28,9 +28,10 @@ A "syllabus" and repository of Processing examples for ITP fall workshop about p
     * [How to make Planets in WebGL](http://learningthreejs.com/blog/2013/09/16/how-to-make-the-earth-in-webgl/)
     * [Creating normal maps from NASA depth data](http://poniesandlight.co.uk/notes/creating_normal_maps_from_nasa_depth_data/), [Source](https://github.com/tgfrerer/normalMapper)
     * [Database of JPL/Caltech generated planetary maps](http://maps.jpl.nasa.gov/)
-    * [Paul Bourke on spherical noise textures](http://paulbourke.net/texture_colour/perlin/)
+    * [Paul Bourke texturing with spheres](http://paulbourke.net/texture_colour/tiling/)
+    * [Paul Bourke spherical 3D perlin texture](http://paulbourke.net/texture_colour/perlin/)
     * [Planet Pixel Emporium](http://planetpixelemporium.com/planets.html)
-    * [Planets in Processing](https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition/tree/master/planets)
+    * [Planet Examples in Processing](https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition/tree/master/planets)
 * 3D Models
     * [NASA models](http://www.nasa.gov/multimedia/3d_resources/models.html)
     * [Processing Demos (OBJ only)](https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition/tree/master/3dmodels)
