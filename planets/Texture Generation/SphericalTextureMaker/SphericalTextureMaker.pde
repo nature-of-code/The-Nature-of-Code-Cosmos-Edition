@@ -15,9 +15,8 @@ void setup() {
     noise.pixels[i] = color(random(255));
   }
   noise.updatePixels();
-  
-  texture1 = makeTexture(noise, 512, 256);
-  texture2 = makeTexture(marble, 512, 256);
+  texture1 = sphericalTexture(noise, 512, 256);
+  texture2 = sphericalTexture(marble, 512, 256);
 }
 
 void draw() {
@@ -30,10 +29,9 @@ void draw() {
 
 }
 
-PImage makeTexture(PImage source,int w, int h) {
+PImage sphericalTexture(PImage source,int w, int h) {
   PImage texture = createImage(w,h,ARGB);
   texture.loadPixels();
-
   for (int x = 0; x < w; x++) {
     for (int y = 0; y < h; y++) {
       // The angle values corresponding to each x,y pair:
