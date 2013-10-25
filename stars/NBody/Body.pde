@@ -1,27 +1,29 @@
-import java.awt.Color;
 
-public class Body {
-  private static final double G = 6.673e-11;   // gravitational constant
-  private static final double solarmass=1.98892e30;
+ class Body {
 
-  public double rx, ry;       // holds the cartesian positions
-  public double vx, vy;       // velocity components 
-  public double fx, fy;       // force components
-  public double mass;         // mass
-  //public Color color;         // color (for fun)
-  color c;
-  // create and initialize a new Body
-  public Body(double rx, double ry, double vx, double vy, double mass, color c) {
+   double rx, ry;       // holds the cartesian positions
+   double vx, vy;       // velocity components 
+   double fx, fy;       // force components
+   double mass;         // mass
+
+    // create and initialize a new Body
+   Body(double rx, double ry, double vx, double vy, double mass) {
     this.rx    = rx;
     this.ry    = ry;
     this.vx    = vx;
     this.vy    = vy;
     this.mass  = mass;
-    this.c = c;
+  }
+
+  void display() {
+
+    stroke(255, 200);
+    strokeWeight(2);
+    point((int) Math.round(rx*scale/1e18), (int) Math.round(ry*scale/1e18));
   }
 
   // update the velocity and position using a timestep dt
-  public void update(double dt) {
+   void update(double dt) {
     vx += dt * fx / mass;
     vy += dt * fy / mass;
     rx += dt * vx;
@@ -29,21 +31,21 @@ public class Body {
   }
 
   // returns the distance between two bodies
-  public double distanceTo(Body b) {
+   double distanceTo(Body b) {
     double dx = rx - b.rx;
     double dy = ry - b.ry;
     return Math.sqrt(dx*dx + dy*dy);
   }
 
   // set the force to 0 for the next iteration
-  public void resetForce() {
+   void resetForce() {
     fx = 0.0;
     fy = 0.0;
   }
 
   // compute the net force acting between the body a and b, and
   // add to the net force acting on a
-  public void addForce(Body b) {
+   void addForce(Body b) {
     Body a = this;
     double EPS = 3E4;      // softening parameter (just to avoid infinities)
     double dx = b.rx - a.rx;
@@ -55,7 +57,7 @@ public class Body {
   }
 
   // convert to string representation formatted nicely
-  public String toString() {
+   String toString() {
     return "" + rx + ", "+ ry+ ", "+  vx+ ", "+ vy+ ", "+ mass;
   }
 }
