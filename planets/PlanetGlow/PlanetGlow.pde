@@ -1,6 +1,6 @@
+// Textures from: http://planetpixelemporium.com/
 
-
-PImage[] textures = new PImage[3];
+PImage[] textures = new PImage[6];
 int currentTex = 2;
 PShape planet;
 
@@ -8,10 +8,10 @@ ParticleSystem ps;
 PImage sprite;  
 PImage glow;
 
-boolean glowing = true;
+boolean glowing = false;
 boolean sphere = true;
-boolean particles = true;
-boolean particleTex = true;
+boolean particles = false;
+boolean particleTex = false;
 
 
 void setup() {
@@ -22,6 +22,10 @@ void setup() {
   textures[0] = loadImage("blue.png");
   textures[1] = loadImage("moon.jpg");
   textures[2] = loadImage("sun.png");
+  textures[3] = loadImage("earth.jpg");
+  textures[4] = loadImage("mars.jpg");
+  textures[5] = loadImage("jupiter.jpg");
+
   planet.setTexture(textures[currentTex]);
   glow = loadImage("glow.png");
   sprite = loadImage("sprite.png");
