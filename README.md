@@ -12,17 +12,28 @@ A "syllabus" and repository of Processing examples for ITP fall workshop about p
 * Processing Dome Projection Library
     * [Github Repo](https://github.com/codeanticode/planetarium)
     * [Library Documentation](http://interfaze.info/libraries/planetarium/)
-    * To install the library, go to [Processing's Library Contribution Manager](http://wiki.processing.org/w/How_to_Install_a_Contributed_Library).  
+    * [Blog post about library](http://codeanticode.wordpress.com/2013/09/06/dome-projection/)
+    * To install the library, go to [Processing's Library Contribution Manager](http://wiki.processing.org/w/How_to_Install_a_Contributed_Library).
 * [Dave Pentecost and the LES Girls Club](http://www.domebase.org/)
 * [Carter Emmart Applications Talk](https://vimeo.com/74415426)
 
 ### It looks like space, kind of
-* [Robert Hodgin's Cinder Star](https://github.com/flight404/Eyeo2012/tree/master/Star)
-* [Planets in Processing](https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition/tree/master/planets)
-* [Tons of 3D models from NASA](http://www.nasa.gov/multimedia/3d_resources/models.html)
-* [3D Models in Processing](https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition/tree/master/3dmodels)
-* [Making of 100,000 Stars (WebGL)](http://www.html5rocks.com/en/tutorials/casestudies/100000stars/)]
-* [How to make Planets in WebGL](http://learningthreejs.com/blog/2013/09/16/how-to-make-the-earth-in-webgl/)
+* Stars
+    * [Robert Hodgin's Cinder Star](https://github.com/flight404/Eyeo2012/tree/master/Star)
+    * [Making of 100,000 Stars (WebGL)](http://www.html5rocks.com/en/tutorials/casestudies/100000stars/)]
+    * [100 Year Starship Screensaver](http://roberthodgin.com/look-up-100-year-starship-screensaver/)
+    * [StarNest Shader](https://www.shadertoy.com/view/4dfGDM)
+    * [Processing Star Examples]()
+* Planets
+    * [How to make Planets in WebGL](http://learningthreejs.com/blog/2013/09/16/how-to-make-the-earth-in-webgl/)
+    * [Creating normal maps from NASA depth data](http://poniesandlight.co.uk/notes/creating_normal_maps_from_nasa_depth_data/), [Source](https://github.com/tgfrerer/normalMapper)
+    * [Database of JPL/Caltech generated planetary maps](http://maps.jpl.nasa.gov/)
+    * [Paul Bourke on spherical noise textures](http://paulbourke.net/texture_colour/perlin/)
+    * [Planet Pixel Emporium](http://planetpixelemporium.com/planets.html)
+    * [Planets in Processing](https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition/tree/master/planets)
+* 3D Models
+    * [NASA models](http://www.nasa.gov/multimedia/3d_resources/models.html)
+    * [Processing Demos (OBJ only)](https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition/tree/master/3dmodels)
 
 ### Actual Science
 * Kepler Mission Data
@@ -55,10 +66,17 @@ A "syllabus" and repository of Processing examples for ITP fall workshop about p
     * [ISS Crew Earth Observation Photos from NASA](http://eol.jsc.nasa.gov/Videos/CrewEarthObservationsVideos/)
     * [Time-Lapse Earth from ISS](https://vimeo.com/61487989)
     * [Processing examples for getting ISS photo data](https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition/tree/master/imaging/iss)
-* [Creating normal maps from NASA depth data](http://poniesandlight.co.uk/notes/creating_normal_maps_from_nasa_depth_data/), [Source](https://github.com/tgfrerer/normalMapper)
 * [Nasa "Multimedia" HD](http://www.nasa.gov/multimedia/hd/)
 * [Nasa Earth Observatory](http://earthobservatory.nasa.gov/)
 * [ALMA telescope: star birth](http://www.almaobservatory.org/en/press-room/press-releases/632-alma-takes-close-look-at-drama-of-starbirth)
+
+### Other sources for space data
+* [AMNH Digital Universe](http://www.amnh.org/our-research/hayden-planetarium/digital-universe)
+* [Partiview](http://www.lns.cornell.edu/~seb/partiview/), [Partiview Planets](http://www.lns.cornell.edu/~seb/partiview/planets.html)
+* [active space missions traveling beyond Earth orbit](http://www.planetary.org/multimedia/space-images/charts/whats-up-in-the-solar-system-frohn.html)
+* [Ardusat](http://www.kickstarter.com/projects/575960623/ardusat-your-arduino-experiment-in-space)
+* [Black Hole Gas Cloud](http://www.space.com/21983-black-hole-rips-and-whips-galactic-gas-cloud-video.html)
+
 
 ## 12:00 PM - Lunch
 
@@ -69,11 +87,3 @@ A "syllabus" and repository of Processing examples for ITP fall workshop about p
 # Day 2, Friday, Nov 1st, 3:30-6
 
 ## Project Presentations
-
-Other Links TBD
----------------
-* http://www.lns.cornell.edu/~seb/partiview/
-* http://www.lns.cornell.edu/~seb/partiview/planets.html
-* [Black Hole Gas Cloud](http://www.space.com/21983-black-hole-rips-and-whips-galactic-gas-cloud-video.html)
-* [active space missions traveling beyond Earth orbit](http://www.planetary.org/multimedia/space-images/charts/whats-up-in-the-solar-system-frohn.html)
-* [Ardusat](http://www.kickstarter.com/projects/575960623/ardusat-your-arduino-experiment-in-space)
