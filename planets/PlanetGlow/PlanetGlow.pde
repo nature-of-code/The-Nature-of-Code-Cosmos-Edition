@@ -30,13 +30,15 @@ boolean particleTex = false;
 // Very lame not arcball rotation
 float rotX, rotY;
 
+float r = 300;
+
 
 void setup() {
-  size(640, 480, P3D);
+  size(1600, 1600, P3D);
   noStroke();
   fill(255);
   // Create sphere and load all possible textures
-  planet = createShape(SPHERE, 100);
+  planet = createShape(SPHERE, r);
   textures[0] = loadImage("blue.png");
   textures[1] = loadImage("moon.jpg");
   textures[2] = loadImage("sun.png");
@@ -48,7 +50,7 @@ void setup() {
   // Load other assets
   glow = loadImage("glow.png");
   sprite = loadImage("sprite.png");
-  ps = new ParticleSystem(1500);
+  ps = new ParticleSystem(2500);
 }
 
 void draw() {
@@ -85,7 +87,7 @@ void draw() {
   if (glowing) {
     imageMode(CENTER);
     tint(255);
-    image(glow, 0, 0, 250, 250);
+    image(glow, 0, 0, r*2.5, r*2.5);
   }
 
   // Some info

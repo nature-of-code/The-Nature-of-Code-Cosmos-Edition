@@ -8,7 +8,7 @@ PShape shuttle;
 float rotX, rotY;
 
 void setup() {
-  size(600, 400, P3D);
+  size(1600, 1600, P3D);
   shuttle = loadShape("shuttle.obj");
   shuttle.scale(50,50,50);
 }

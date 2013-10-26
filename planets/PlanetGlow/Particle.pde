@@ -16,7 +16,7 @@ class Particle {
 
   Particle() {
     position = new PVector();
-    partSize = random(10, 60);
+    partSize = random(width/60, width/10);
     rebirth();
     lifespan = random(127);
   }
@@ -31,11 +31,11 @@ class Particle {
     velocity.mult(speed);
     lifespan = 127;   
     position = PVector.random3D();
-    position.mult(105);
+    position.mult(r*1.05);
   }
 
   boolean isDead() {
-    if (lifespan < 0) {
+    if (lifespan == 0) {
       return true;
     } 
     else {
@@ -64,7 +64,10 @@ class Particle {
 
   void update() {
     position.add(velocity);
-    lifespan = lifespan - 10;
+    lifespan = lifespan - 4;
+    if (lifespan < 0) {
+      lifespan = 0; 
+    }
   }
 }
 

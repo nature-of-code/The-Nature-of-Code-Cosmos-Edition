@@ -13,7 +13,7 @@ class Planet {
   PShape sphere;
 
   Planet(PImage texture) {
-    mass = random(0.2,2.5);
+    mass = random(0.5,3.5);
     location = PVector.random3D();
     location.mult(random(100,width/2));
     velocity = new PVector(0,0,2);   // Arbitrary starting velocity
