@@ -1,15 +1,20 @@
+// NOC Cosmos
+// https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition
 
+// From http://paulbourke.net/texture_colour/perlin/
 
 PImage texture;
 
 void setup() {
   size(512, 256);
+  // A texture
   texture = createImage(512, 256, ARGB);
   calcTexture();
 }
 
 void draw() {
   background(0);
+  // Display and save
   image(texture,0,0);
   texture.save("output/blue.png");
   noLoop();

@@ -1,3 +1,7 @@
+// NOC Cosmos
+// https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition
+
+// Simplest star class ever!  Just a position!
 class Star {
   PVector pos;
   

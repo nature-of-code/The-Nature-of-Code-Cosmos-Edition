@@ -1,3 +1,6 @@
+// NOC Cosmos
+// https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition
+
 // Start of a simple ExoPlanets Visualization
 // based off of the work of Jer Thorp: https://github.com/blprnt/Kepler-Visualization
 

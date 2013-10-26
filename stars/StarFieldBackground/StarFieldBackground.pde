@@ -1,5 +1,10 @@
+// NOC Cosmos
+// https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition
+
+// Stars are all placed randomly on a very very large sphere
 Star[] stars = new Star[1000];
 
+// Size of taht sphere
 float depth = 1000;
 
 boolean rotate = false;
@@ -25,8 +30,10 @@ void draw() {
   lights();
   noStroke();
   fill(100);
+  // Something in the middle for show
   sphere(40);
-
+  
+  // Draw everything
   for (Star s : stars) {
     s.display();
   }

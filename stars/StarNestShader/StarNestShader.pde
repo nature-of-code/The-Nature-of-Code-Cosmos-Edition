@@ -1,6 +1,10 @@
+// NOC Cosmos
+// https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition
+
 /**
  * Star Nest
  * https://www.shadertoy.com/view/4dfGDM by kali
+ * Ported to Processing by Andres Colubri
  */
  
 PShader shader;

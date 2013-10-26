@@ -1,13 +1,24 @@
+// NOC Cosmos
+// https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition
+
+// Fake flying through space demo
+
+// 1000 "stars"
 Star[] stars = new Star[1000];
 
+// how fast are we flying
 float factor = 1;
+// A target to "lerp" to
 float target = 1;
 
+// How far away are stars
 float depth = 5000;
 
+// Flags
 boolean hyperdrive = false;
 boolean rotate = false;
 
+// Some rotation
 float rotX, rotY, rotZ;
 
 void setup() {
@@ -26,7 +37,8 @@ void draw() {
   rotateX(rotY);
   rotateY(rotX);
   rotateZ(rotZ);
-
+  
+  // Draw all stars, they move, not us
   for (Star s : stars) {
     s.update();
     s.display();

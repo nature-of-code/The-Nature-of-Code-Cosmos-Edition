@@ -1,8 +1,13 @@
+// NOC Cosmos
+// https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition
+
 // Adapted from https://github.com/natronics/ISS-photo-locations/
 
 void setup() {
 
   size(1200, 600);
+  
+  // values for converting lat lon to pixels
   float lata = -height / 180.0;
   float latb = height - (lata*-90.0);
   float lona = width / 360.0;
@@ -10,14 +15,17 @@ void setup() {
 
   background(255);
   int total = 0;
+  // Load all the missions
   for (int i = 1; i < 35; i++) {
-    println("drawing mission " + i);
+    println("Parsing mission " + i);
     Table mission = loadTable("ISS"+nf(i, 3)+".csv");
     for (TableRow row : mission.rows()) {
+      // Get lat lon
       float lat = row.getFloat(1);
       float lon = row.getFloat(2);
       stroke(0,10);
       strokeWeight(2);
+      // Draw each as xy point
       point(lona*lon+lonb, lata*lat+latb);
       total++;
     }
@@ -26,6 +34,7 @@ void setup() {
   fill(0);
   text("One dot per photo\nTotal photos: " + nfc(total),10,60);
   
+  // This code down here sort of puts it all on a sphere
   /*size(640,480,P3D);
    background(0);
    translate(width/2, height/2);

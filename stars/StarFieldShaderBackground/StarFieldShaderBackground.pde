@@ -1,3 +1,9 @@
+// NOC Cosmos
+// https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition
+
+// This example does not work right now
+// https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition/issues/8
+
 /**
  * Star Nest
  * https://www.shadertoy.com/view/4dfGDM by kali

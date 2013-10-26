@@ -1,5 +1,10 @@
+// NOC Cosmos
+// https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition
+
+// PShape to hold a model
 PShape shuttle;
 
+// We could do better than this simple rotation implementation
 float rotX, rotY;
 
 void setup() {
@@ -14,6 +19,7 @@ void draw() {
   rotateX(rotY);
   rotateY(rotX);
   lights();
+  // Just draw as simple shape
   shape(shuttle);
 }
 

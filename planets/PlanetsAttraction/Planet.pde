@@ -19,6 +19,7 @@ class Planet {
     velocity = new PVector(0,0,2);   // Arbitrary starting velocity
     acceleration = new PVector();    
     noStroke();
+    // Planet is a PShape sphere
     sphere = createShape(SPHERE, mass*8, 20);
     sphere.setTexture(texture);
   }

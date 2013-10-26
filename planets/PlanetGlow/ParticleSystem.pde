@@ -1,3 +1,8 @@
+// NOC Cosmos
+// https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition
+
+// Your standard NOC particle system
+
 class ParticleSystem {
   ArrayList<Particle> particles;
 

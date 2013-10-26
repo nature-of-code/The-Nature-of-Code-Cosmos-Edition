@@ -1,5 +1,9 @@
+// NOC Cosmos
+// https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition
+
 import saito.objloader.*;
 
+// Using OBJModel library this time
 OBJModel spacesuit;
 
 boolean bTexture = true;
@@ -10,6 +14,8 @@ float rotX, rotY;
 
 void setup() {
   size(800, 600, P3D);
+  
+  // Load model and access some functionality
   spacesuit = new OBJModel(this, "acesjustforroomshow.obj", "relative", QUADS);
   spacesuit.enableDebug();
   spacesuit.scale(200);
@@ -31,6 +37,7 @@ void draw() {
   } else {
     noStroke();
   }
+  // Draw model
   spacesuit.draw();
   popMatrix();
 }

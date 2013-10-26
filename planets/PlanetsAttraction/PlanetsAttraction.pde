@@ -1,3 +1,6 @@
+// NOC Cosmos
+// https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition
+
 /**
  * Gravitational Attraction (3D) 
  * by Daniel Shiffman.  
@@ -23,23 +26,26 @@ Planet[] planets = new Planet[10];
 // One sun (note sun is not attracted to planets (violation of Newton's 3rd Law)
 Sun s;
 
+// Some textures
 PImage[] textures = new PImage[5];
 
+// A background starfield
 Starfield stars;
 
+// Lame not-arcball rotation
 float rotX, rotY;
 
 
 void setup() {
   size(800, 800, P3D);
-
+  
+  // Load textures
   textures[0] = loadImage("blue.png");
   textures[1] = loadImage("moon.jpg");
   textures[2] = loadImage("earth.jpg");
   textures[3] = loadImage("mars.jpg");
   textures[4] = loadImage("jupiter.jpg");
 
-  
   // Some random planets
   for (int i = 0; i < planets.length; i++) {
     int index = int(random(textures.length));
@@ -67,6 +73,7 @@ void draw() {
   rotateX(rotY);
   rotateY(rotX);
   
+  // Draw background
   stars.display();
 
   // Display the Sun

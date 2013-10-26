@@ -1,18 +1,26 @@
+// NOC Cosmos
+// https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition
 
+// 3D noise textured onto a sphere
 
+// The noise
 PImage noise;
+// Spherical texture
 PImage texture;
+// The sphere itself
 PShape planet;
 
+// Silly rotation
 float rotX, rotY;
-
 
 void setup() {
   size(640, 480, P3D);
+  // Make images
   noise = createImage(512, 256, ARGB);
   texture = createImage(512, 256, ARGB);
   noStroke();
   fill(255);
+  // Make sphere
   planet = createShape(SPHERE, 150);
   planet.setTexture(texture);
 }
@@ -27,6 +35,9 @@ void draw() {
   shape(planet);
 }
 
+// Perlin noise algorithm to make image texture
+// It's symmetrical which is sort of a problem
+// but interesting and then again it tiles
 float zoff = 0;
 void calcTexture() {
   noise.loadPixels();
@@ -63,6 +74,8 @@ void calcTexture() {
   sphericalTexture(noise, texture, 512, 256);
 }
 
+// Spherical texture formula from:
+// Thank you http://paulbourke.net/texture_colour/tiling/
 void sphericalTexture(PImage source, PImage dest, int w, int h) {
   dest.loadPixels();
   for (int x = 0; x < w; x++) {

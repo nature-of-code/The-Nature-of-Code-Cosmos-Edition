@@ -1,18 +1,33 @@
+// NOC Cosmos
+// https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition
+
 // Textures from: http://planetpixelemporium.com/
 
+// Show how to draw sphere with texture
+// Add a billboarded glow
+// And billboarde particles
+
+// A bunch of possible textures
 PImage[] textures = new PImage[6];
+// Which texture
 int currentTex = 2;
+// Our planet PShape
 PShape planet;
 
+// A particle system
 ParticleSystem ps;
+// Image for particle
 PImage sprite;  
+// A "glow" atmosphere image
 PImage glow;
 
+// current state
 boolean glowing = false;
 boolean sphere = true;
 boolean particles = false;
 boolean particleTex = false;
 
+// Very lame not arcball rotation
 float rotX, rotY;
 
 
@@ -20,6 +35,7 @@ void setup() {
   size(640, 480, P3D);
   noStroke();
   fill(255);
+  // Create sphere and load all possible textures
   planet = createShape(SPHERE, 100);
   textures[0] = loadImage("blue.png");
   textures[1] = loadImage("moon.jpg");
@@ -27,8 +43,9 @@ void setup() {
   textures[3] = loadImage("earth.jpg");
   textures[4] = loadImage("mars.jpg");
   textures[5] = loadImage("jupiter.jpg");
-
+  // Start with a texxture
   planet.setTexture(textures[currentTex]);
+  // Load other assets
   glow = loadImage("glow.png");
   sprite = loadImage("sprite.png");
   ps = new ParticleSystem(1500);
@@ -41,14 +58,16 @@ void draw() {
   pushMatrix();
   translate(width/2, height/2);
 
-
+  
   lights();
   rotateY(rotX);
   rotateX(rotY);
+  // Sphere
   if (sphere) {
     shape(planet);
   }
-
+  
+  // Particles
   if (particles) {
     if (particleTex) {
       hint(DISABLE_DEPTH_MASK);
@@ -59,7 +78,8 @@ void draw() {
       hint(ENABLE_DEPTH_MASK);
     }
   }
-
+  
+  // Unrotate to billboard glow
   rotateX(-rotY);
   rotateY(-rotX);
   if (glowing) {
@@ -68,8 +88,7 @@ void draw() {
     image(glow, 0, 0, 250, 250);
   }
 
-
-
+  // Some info
   fill(255);
   textSize(16);
   popMatrix();

@@ -1,3 +1,8 @@
+// NOC Cosmos
+// https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition
+
+// Your standard NOC particle
+
 class Particle {
 
   PVector position;
@@ -8,7 +13,6 @@ class Particle {
   float partSize;
 
   PVector gravity = new PVector(0, 0.1);
-
 
   Particle() {
     position = new PVector();
@@ -42,6 +46,7 @@ class Particle {
   void display() {
     pushMatrix();
     translate(position.x, position.y, position.z);
+    // Unrotate to billboard particles
     rotateX(-rotY);
     rotateY(-rotX);
     if (particleTex) {
