@@ -25,7 +25,7 @@ class Star {
 
   void display() {
     stroke(255, 127);
-    strokeWeight(1.5);
+    strokeWeight(2.5);
     point(pos.x, pos.y, pos.z);
   }
 }

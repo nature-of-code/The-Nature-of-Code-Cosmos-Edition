@@ -11,7 +11,7 @@ void setup() {
 void draw() {
   background(0);
   image(texture,0,0);
-  texture.save("blue.png");
+  texture.save("output/blue.png");
   noLoop();
 }
 

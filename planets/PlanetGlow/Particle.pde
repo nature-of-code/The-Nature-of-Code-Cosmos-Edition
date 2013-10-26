@@ -42,7 +42,8 @@ class Particle {
   void display() {
     pushMatrix();
     translate(position.x, position.y, position.z);
-
+    rotateX(-rotY);
+    rotateY(-rotX);
     if (particleTex) {
       imageMode(CENTER);
       tint(color(255, 255, 255, lifespan));
@@ -51,7 +52,7 @@ class Particle {
     else {
       stroke(255, lifespan);
       strokeWeight(partSize/4);
-      point(0,0);
+      point(0, 0);
     }
     popMatrix();
   }

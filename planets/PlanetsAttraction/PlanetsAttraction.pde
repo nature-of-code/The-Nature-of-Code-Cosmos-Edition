@@ -23,7 +23,7 @@ Planet[] planets = new Planet[10];
 // One sun (note sun is not attracted to planets (violation of Newton's 3rd Law)
 Sun s;
 
-PImage[] textures = new PImage[3];
+PImage[] textures = new PImage[5];
 
 Starfield stars;
 
@@ -33,9 +33,12 @@ float rotX, rotY;
 void setup() {
   size(800, 800, P3D);
 
-  textures[0] = loadImage("earth.jpg");
+  textures[0] = loadImage("blue.png");
   textures[1] = loadImage("moon.jpg");
-  textures[2] = loadImage("mercury.jpg");
+  textures[2] = loadImage("earth.jpg");
+  textures[3] = loadImage("mars.jpg");
+  textures[4] = loadImage("jupiter.jpg");
+
   
   // Some random planets
   for (int i = 0; i < planets.length; i++) {

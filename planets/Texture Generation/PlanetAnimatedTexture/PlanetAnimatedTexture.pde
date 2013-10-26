@@ -4,6 +4,9 @@ PImage noise;
 PImage texture;
 PShape planet;
 
+float rotX, rotY;
+
+
 void setup() {
   size(640, 480, P3D);
   noise = createImage(512, 256, ARGB);

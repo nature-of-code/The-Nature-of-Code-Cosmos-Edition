@@ -13,6 +13,8 @@ boolean sphere = true;
 boolean particles = false;
 boolean particleTex = false;
 
+float rotX, rotY;
+
 
 void setup() {
   size(640, 480, P3D);
@@ -29,7 +31,7 @@ void setup() {
   planet.setTexture(textures[currentTex]);
   glow = loadImage("glow.png");
   sprite = loadImage("sprite.png");
-  ps = new ParticleSystem(500);
+  ps = new ParticleSystem(1500);
 }
 
 void draw() {
@@ -41,18 +43,10 @@ void draw() {
 
 
   lights();
-  rotateY(frameCount*0.003);
-  rotateX(frameCount*0.0024);
+  rotateY(rotX);
+  rotateX(rotY);
   if (sphere) {
     shape(planet);
-  }
-
-  rotateX(-frameCount*0.0024);
-  rotateY(-frameCount*0.003);
-  if (glowing) {
-    imageMode(CENTER);
-    tint(255);
-    image(glow, 0, 0, 250, 250);
   }
 
   if (particles) {
@@ -65,6 +59,16 @@ void draw() {
       hint(ENABLE_DEPTH_MASK);
     }
   }
+
+  rotateX(-rotY);
+  rotateY(-rotX);
+  if (glowing) {
+    imageMode(CENTER);
+    tint(255);
+    image(glow, 0, 0, 250, 250);
+  }
+
+
 
   fill(255);
   textSize(16);
@@ -89,5 +93,10 @@ void keyPressed() {
   else if (key == '5') {
     particleTex = !particleTex;
   }
+}
+
+void mouseDragged() {
+  rotX += (mouseX - pmouseX) * 0.01;
+  rotY -= (mouseY - pmouseY) * 0.01;
 }
 
