@@ -1,7 +1,7 @@
 // NOC Cosmos
 // https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition
 
-// This example does not work right now
+// Shader needs to be tiled and spherized
 // https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition/issues/8
 
 /**
@@ -21,20 +21,20 @@ boolean rotate = false;
 float rotX, rotY, rotZ;
 
 void setup() {
-  size(400, 400, P3D);
+  size(800, 800, P3D);
   canvas = createGraphics(512, 256, P3D);
 
   // The code of this shader shows how to integrate shaders from shadertoy
   // into Processing with minimal changes.
   shader = loadShader("stars.glsl");
-  shader.set("resolution", float(width), float(height));
+  shader.set("resolution", float(canvas.width), float(canvas.height));
 
   noStroke();
-  
+
   // Make larger sphere for it to be background
   // sphere = createShape(SPHERE, 800);
-  
-  sphere = createShape(SPHERE, 100);
+
+  sphere = createShape(SPHERE, 2400);
 
   sphere.setTexture(canvas);
 }
@@ -47,12 +47,12 @@ void draw() {
 
   canvas.beginDraw();
   canvas.shader(shader); 
-  canvas.rect(0, 0, width, height);
+  canvas.rect(0, 0, canvas.width, canvas.height);
   canvas.endDraw();
 
   //image(canvas,0,0);
   pushMatrix();
-  translate(width/2, height/2);
+  translate(width/2, height/2,0);
   rotateX(rotY);
   rotateY(rotX);
   rotateZ(rotZ);
