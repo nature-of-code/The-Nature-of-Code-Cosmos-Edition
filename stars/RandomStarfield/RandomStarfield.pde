@@ -4,7 +4,7 @@
 // Fake flying through space demo
 
 // 1000 "stars"
-Star[] stars = new Star[1000];
+Star[] stars = new Star[2000];
 
 // how fast are we flying
 float factor = 1;
@@ -22,7 +22,7 @@ boolean rotate = false;
 float rotX, rotY, rotZ;
 
 void setup() {
-  size(800, 600, P3D);
+  size(800, 800, P3D);
   for (int i=0; i<stars.length; i++) {
     stars[i] = new Star();
   }
@@ -33,7 +33,7 @@ void draw() {
   factor = lerp(factor, target, 0.1);
   
   pushMatrix();
-  translate(width/2, height/2);
+  translate(width/2, height/2 );
   rotateX(rotY);
   rotateY(rotX);
   rotateZ(rotZ);
