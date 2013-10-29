@@ -16,6 +16,10 @@ A "syllabus" and repository of Processing examples for ITP fall workshop about p
     * To install the library, go to [Processing's Library Contribution Manager](http://wiki.processing.org/w/How_to_Install_a_Contributed_Library).
 * [Dave Pentecost and the LES Girls Club](http://www.domebase.org/)
 * [Carter Emmart Applications Talk](https://vimeo.com/74415426)
+* [Arts Lab Dome Resources](http://artslab.unm.edu/resources)
+* [After Effects Dome Camera Rig](http://artslab.unm.edu/3086/after-effects-camera-rig)
+* [Unity Dome Projection from Paul Bourke](http://paulbourke.net/dome/UnityiDome/)
+* [DomeFest Videos](https://vimeo.com/user1007980)
 
 ### It looks like space, kind of
 * Stars
