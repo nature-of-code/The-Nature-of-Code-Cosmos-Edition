@@ -89,6 +89,9 @@ A "syllabus" and repository of Processing examples for ITP fall workshop about p
 
 ## 3:30 PM - 5:00 PM - Look at experiments in Dome
 
+* [Guidelines and links to project documentation can be found here](https://github.com/shiffman/The-Nature-of-Code-Cosmos-Edition/wiki/Cosmos-Projects)
+
+
 # Day 2, Friday, Nov 1st, 3:30-6
 
 ## Project Presentations
