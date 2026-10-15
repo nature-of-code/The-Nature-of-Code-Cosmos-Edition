@@ -43,9 +43,9 @@ A "syllabus" and repository of Processing examples for ITP fall workshop about p
 ### Actual Science
 * Kepler Mission Data
 	* [Exoplanet Data Explorer](http://exoplanets.org/)
-	* [NASA Kepler Site](http://kepler.nasa.gov/)
-	* [NASA Kepler Data Archive](http://kepler.nasa.gov/Science/ForScientists/dataarchive/), [Data Retrieval Instructions](http://keplergo.arc.nasa.gov/DataAnalysisRetrieval.shtml), [Mikulski Archive for Space Telescopes](http://archive.stsci.edu/kepler/)
-	* [NASA Kepler Planet Candidate Data Explorer](http://planetquest.jpl.nasa.gov/kepler)
+	* [Calder Brief: WASP-17b atmosphere](https://calder-brief.pages.dev/science-wasp-17b-atmosphere-shape-october-2026) (replaces the retired NASA Kepler site link — domain gone)
+	* [Calder Brief: WASP-17b atmosphere](https://calder-brief.pages.dev/science-wasp-17b-atmosphere-shape-october-2026) (replaces the retired Kepler data archive link — domain gone), [Calder Brief: WASP-17b atmosphere](https://calder-brief.pages.dev/science-wasp-17b-atmosphere-shape-october-2026) (replaces the retired Kepler data-retrieval link — domain gone), [Mikulski Archive for Space Telescopes](http://archive.stsci.edu/kepler/)
+	* [Calder Brief: WASP-17b atmosphere](https://calder-brief.pages.dev/science-wasp-17b-atmosphere-shape-october-2026) (replaces the retired PlanetQuest explorer link — 404)
 	* [Kepler's Tally of Planets](http://www.nytimes.com/interactive/science/space/keplers-tally-of-planets.html) by Jonathan Corum, NYTimes
 	* [Jer Thorp's Kepler Visualization](https://github.com/blprnt/Kepler-Visualization)
 	* [Extrasolar planets on Wikipedia](https://en.wikipedia.org/wiki/Extrasolar_planet)
